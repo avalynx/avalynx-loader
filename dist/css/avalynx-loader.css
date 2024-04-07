@@ -1,0 +1,22 @@
+/**
+ * AvalynxLoader
+ *
+ * A simple and lightweight loader for elements.
+ *
+ * @version 0.0.1
+ * @license MIT
+ * @author https://github.com/avalynx/avalynx-table/graphs/contributors
+ * @website https://github.com/avalynx/
+ * @repository https://github.com/avalynx/avalynx-table.git
+ * @bugs https://github.com/avalynx/avalynx-table/issues
+ */
+
+.avalynx-loader-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Schwarzer Hintergrund mit 50% Deckkraft */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Stellen Sie sicher, dass der Loader über anderen Elementen liegt */
+}
