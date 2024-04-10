@@ -17,7 +17,7 @@
  *
  */
 
-class AvalynxLoader {
+export class AvalynxLoader {
     constructor(selector, options = {}) {
         this.className = options.className || 'spinner-border text-primary';
         this.loaderText = options.loaderText || 'Loading...';
