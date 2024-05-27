@@ -27,6 +27,10 @@ export class AvalynxLoader {
             selector = '.' + selector;
         }
         this.elements = document.querySelectorAll(selector);
+        if (this.elements.length === 0) {
+            console.error("AvalynxLoader: Loader(s) with selector '" + selector + "' not found");
+            return;
+        }
         this.options = {
             className: 'spinner-border text-primary',
             ...options
