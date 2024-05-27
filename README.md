@@ -79,8 +79,9 @@ AvalynxLoader allows the following options for customization:
 
 - `selector`: A custom selector for targeting tables within the DOM (default: `.avalynx-loader`).
 - `options`: An object containing the following keys:
-  - `className`: A custom class name for the loader element (default: `spinner-border text-primary`).
-  - `loaderText`: A custom text for the loader element (default: `Loading...`). If set to empty string, no text will be displayed.
+    - `className`: (string) A custom class name for the loader element (default: `spinner-border text-primary`).
+- `language` An object containing the following keys:
+    - `loaderText`: (string) A custom text for the loader element (default: `Loading...`). If set to empty string, no text will be displayed.
 
 ## Contributing
 
