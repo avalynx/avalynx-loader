@@ -25,16 +25,16 @@ describe('AvalynxLoader', () => {
     it('should use the default class name and loader text if none are provided', () => {
         avalynxLoader.load = true;
         const spinner = div.querySelector('div');
-        expect(avalynxLoader.className).toBe('spinner-border text-primary');
-        expect(spinner.textContent).toBe('Loading...');
+        expect(avalynxLoader.options.className).toBe('spinner-border text-primary');
+        expect(avalynxLoader.language.loaderText).toBe('Loading...');
     });
 
     it('should use the provided class name and loader text if they are provided', () => {
-        avalynxLoader = new AvalynxLoader('#test', {className: 'test-class', loaderText: 'Test text'});
+        avalynxLoader = new AvalynxLoader('#test', {className: 'test-class'}, {loaderText: 'Test text'});
         avalynxLoader.load = true;
         const spinner = div.querySelector('div');
-        expect(avalynxLoader.className).toBe('test-class');
-        expect(avalynxLoader.loaderText).toBe('Test text');
+        expect(avalynxLoader.options.className).toBe('test-class');
+        expect(avalynxLoader.language.loaderText).toBe('Test text');
     });
 
 });

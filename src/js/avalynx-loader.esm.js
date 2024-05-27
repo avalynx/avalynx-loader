@@ -3,7 +3,7 @@
  *
  * AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
  *
- * @version 0.0.1
+ * @version 0.0.2
  * @license MIT
  * @author https://github.com/avalynx/avalynx-loader/graphs/contributors
  * @website https://github.com/avalynx/
@@ -13,24 +13,28 @@
  * @param {string} selector - The selector for the element(s) to update.
  * @param {object} options - Options for the loader.
  * @param {string} options.className - The class name for the loader spinner.
- * @param {string} options.loaderText - The text to display next to the loader spinner.
+ * @param {object} language - Language settings for the loader.
+ * @param {string} language.loaderText - The text to display with the loader spinner.
  *
  */
 
 export class AvalynxLoader {
-    constructor(selector, options = {}) {
-        this.className = options.className || 'spinner-border text-primary';
-        this.loaderText = options.loaderText || 'Loading...';
-
+    constructor(selector, options = {}, language = {}) {
         if (!selector) {
             selector = '.avalynx-loader';
         }
-
         if (!selector.startsWith('.') && !selector.startsWith('#')) {
             selector = '.' + selector;
         }
-
         this.elements = document.querySelectorAll(selector);
+        this.options = {
+            className: 'spinner-border text-primary',
+            ...options
+        };
+        this.language = {
+            loaderText: 'Loading...',
+            ...language
+        };
         this.loaderOverlays = new Map();
     }
 
@@ -79,10 +83,10 @@ export class AvalynxLoader {
         overlay.style.zIndex = '1000';
 
         const spinner = document.createElement('div');
-        spinner.className = this.className;
+        spinner.className = this.options.className;
         spinner.setAttribute('role', 'status');
         if (this.loaderText !== '') {
-            spinner.innerHTML = '<span class="visually-hidden">' + this.loaderText + '</span>';
+            spinner.innerHTML = '<span class="visually-hidden">' + this.language.loaderText + '</span>';
         } else {
             spinner.innerHTML = '';
         }
