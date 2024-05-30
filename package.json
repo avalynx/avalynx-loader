@@ -29,7 +29,7 @@
   "homepage": "https://github.com/avalynx/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/avalynx/avalynx-loader.git"
+    "url": "git+https://github.com/avalynx/avalynx-loader.git"
   },
   "bugs": {
     "url": "https://github.com/avalynx/avalynx-loader/issues"
