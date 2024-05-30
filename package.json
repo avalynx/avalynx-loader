@@ -12,15 +12,18 @@
   ],
   "keywords": [
     "avalynx",
-    "ref",
-    "vue",
-    "react"
+    "loader",
+    "bootstrap",
+    "bootstrap5",
+    "component",
+    "ajax",
+    "spinner"
   ],
   "ignore": [
     "package.json"
   ],
   "author": {
-    "name": "Juergen Schwind an the avalynx-loader Authors",
+    "name": "Juergen Schwind an the AvalynxLoader Authors",
     "url": "https://github.com/avalynx/avalynx-loader/graphs/contributors"
   },
   "homepage": "https://github.com/avalynx/",

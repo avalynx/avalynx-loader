@@ -18,9 +18,17 @@ Here's a simple example of how to use AvalynxLoader in your project:
 
 ## Installation
 
-To use AvalynxLoader in your project, you can directly include it in your HTML file.
+To use AvalynxLoader in your project, you can directly include it in your HTML file. Ensure you have Bootstrap 5.3 or higher included in your project for AvalynxLoader to work correctly.
 
-Include AvalynxLoader:
+First, include Bootstrap:
+
+```html
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+Then, include AvalynxLoader:
 
 ```html
 <script src="path/to/avalynx-loader.js"></script>
@@ -28,15 +36,15 @@ Include AvalynxLoader:
 
 Replace `path/to/avalynx-loader.js` with the actual path to the file in your project.
 
-## Installation via jsDelivr
+## Installation via jsDelivr ([Link](https://cdn.jsdelivr.net/npm/avalynx-loader/))
 
 AvalynxLoader is also available via [jsDelivr](https://www.jsdelivr.com/). You can include it in your project like this:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/avalynx-loader/dist/avalynx-loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@0.0.1/dist/js/avalynx-loader.min.js"></script>
 ```
 
-## Installation via NPM
+## Installation via NPM ([Link](https://www.npmjs.com/package/avalynx-loader))
 
 AvalynxLoader is also available as a npm package. You can add it to your project with the following command:
 
@@ -62,6 +70,24 @@ After installing, you can import AvalynxLoader into your JavaScript file like th
 import { AvalynxLoader } from 'avalynx-loader';
 ```
 
+Make sure to also include Bootstrap's JS/CSS in your project to ensure AvalynxLoader displays correctly.
+
+## Installation via Composer ([Link](https://packagist.org/packages/avalynx/avalynx-loader))
+
+AvalynxLoader is also available as a Composer package. You can add it to your project with the following command:
+
+```bash
+composer require avalynx/avalynx-loader
+```
+
+After installing, you can import AvalynxLoader into your HTML file like this:
+
+```html
+<script src="vendor/avalynx/avalynx-loader/dist/js/avalynx-loader.js"></script>
+``` 
+
+Make sure to also include Bootstrap's JS/CSS in your project to ensure AvalynxLoader displays correctly.
+
 ## Usage
 
 To use AvalynxLoader in your project, include the AvalynxLoader JavaScript file in your project and initialize the class with the appropriate selector.
@@ -77,11 +103,11 @@ myLoader.load=false;
 
 AvalynxLoader allows the following options for customization:
 
-- `selector`: A custom selector for targeting tables within the DOM (default: `.avalynx-loader`).
+- `selector`: A custom selector for targeting tables within the DOM (default: `'.avalynx-loader'`).
 - `options`: An object containing the following keys:
-    - `className`: (string) A custom class name for the loader element (default: `spinner-border text-primary`).
+    - `className`: (string) A custom class name for the loader element (default: `'spinner-border text-primary'`).
 - `language` An object containing the following keys:
-    - `loaderText`: (string) A custom text for the loader element (default: `Loading...`). If set to empty string, no text will be displayed.
+    - `loaderText`: (string) A custom text for the loader element. If set to empty string, no text will be displayed. (default: `'Loading...'`).
 
 ## Contributing
 
