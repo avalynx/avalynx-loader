@@ -12,7 +12,7 @@
  *
  * @param {string} selector - A custom selector for targeting tables within the DOM (default: '.avalynx-loader').
  * @param {object} options - An object containing the following keys:
- * @param {string} options.className - A custom class name for the loader element (default: 'spinner-border text-primary').
+ * @param {string} options.className - A custom export class name for the loader element (default: 'spinner-border text-primary').
  * @param {object} language - An object containing the following keys:
  * @param {string} language.loaderText - A custom text for the loader element. If set to empty string, no text will be displayed. (default: 'Loading...').
  *
