@@ -3,7 +3,7 @@
  *
  * AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
  *
- * @version 0.0.2
+ * @version 0.0.3
  * @license MIT
  * @author https://github.com/avalynx/avalynx-loader/graphs/contributors
  * @website https://github.com/avalynx/
