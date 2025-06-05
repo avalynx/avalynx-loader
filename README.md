@@ -41,7 +41,7 @@ Replace `path/to/avalynx-loader.js` with the actual path to the file in your pro
 AvalynxLoader is also available via [jsDelivr](https://www.jsdelivr.com/). You can include it in your project like this:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@0.0.3/dist/js/avalynx-loader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@1.0.0/dist/js/avalynx-loader.min.js"></script>
 ```
 
 ## Installation via NPM ([Link](https://www.npmjs.com/package/avalynx-loader))
@@ -68,6 +68,16 @@ After installing, you can import AvalynxLoader into your JavaScript file like th
 
 ```javascript
 import { AvalynxLoader } from 'avalynx-loader';
+```
+
+Make sure to also include Bootstrap's JS/CSS in your project to ensure AvalynxLoader displays correctly.
+
+## Installation via Symfony AssetComposer
+
+More information about the Symfony AssetComposer Bundle can be found [here](https://github.com/jbsnewmedia/asset-composer-bundle).
+
+```twig
+{% do addAssetComposer('avalynx/avalynx-loader/dist/js/avalynx-loader.js') %}
 ```
 
 Make sure to also include Bootstrap's JS/CSS in your project to ensure AvalynxLoader displays correctly.
