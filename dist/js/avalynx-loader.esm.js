@@ -3,7 +3,7 @@
  *
  * AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  * @author https://github.com/avalynx/avalynx-loader/graphs/contributors
  * @website https://github.com/avalynx/
@@ -12,11 +12,13 @@
  *
  * @param {string} selector - A custom selector for targeting tables within the DOM (default: '.avalynx-loader').
  * @param {object} options - An object containing the following keys:
- * @param {string} options.className - A custom export class name for the loader element (default: 'spinner-border text-primary').
+ * @param {string} options.className - A custom class name for the loader element (default: 'spinner-border text-primary').
  * @param {object} language - An object containing the following keys:
  * @param {string} language.loaderText - A custom text for the loader element. If set to empty string, no text will be displayed. (default: 'Loading...').
  *
  */
+
+import * as bootstrap from 'bootstrap';
 
 export class AvalynxLoader {
     constructor(selector, options = {}, language = {}) {
@@ -31,10 +33,16 @@ export class AvalynxLoader {
             console.error("AvalynxLoader: Loader(s) with selector '" + selector + "' not found");
             return;
         }
+        if (options === null || typeof options !== 'object') {
+            options = {};
+        }
         this.options = {
             className: 'spinner-border text-primary',
             ...options
         };
+        if (language === null || typeof language !== 'object') {
+            language = {};
+        }
         this.language = {
             loaderText: 'Loading...',
             ...language
