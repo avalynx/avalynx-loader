@@ -66,6 +66,16 @@ describe('AvalynxLoader', () => {
             expect(loader.language.loaderText).toBe('Loading...');
         });
 
+        test('handles null or non-object options and language', () => {
+            const el = document.createElement('div');
+            el.className = 'null-check';
+            document.body.appendChild(el);
+
+            const loader = new AvalynxLoader('.null-check', null, null);
+            expect(loader.options.className).toBe('spinner-border text-primary');
+            expect(loader.language.loaderText).toBe('Loading...');
+        });
+
         test('merges custom options and language', () => {
             const el = document.createElement('div');
             el.className = 'custom';

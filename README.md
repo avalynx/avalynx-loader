@@ -1,5 +1,13 @@
 # AvalynxLoader
 
+[![npm version](https://img.shields.io/npm/v/avalynx-loader)](https://www.npmjs.com/package/avalynx-loader)
+[![npm downloads](https://img.shields.io/npm/dt/avalynx-loader)](https://www.npmjs.com/package/avalynx-loader)
+[![jsDelivr](https://img.shields.io/jsdelivr/npm/hm/avalynx-loader)](https://www.jsdelivr.com/package/npm/avalynx-loader)
+[![License](https://img.shields.io/npm/l/avalynx-loader)](LICENSE)
+[![Tests](https://github.com/avalynx/avalynx-loader/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/avalynx/avalynx-loader/actions/workflows/tests.yml)
+[![codecov](https://codecov.io/gh/avalynx/avalynx-loader/branch/main/graph/badge.svg)](https://codecov.io/gh/avalynx/avalynx-loader)
+[![GitHub stars](https://img.shields.io/github/stars/avalynx/avalynx-loader?style=flat&logo=github)](https://github.com/avalynx/avalynx-loader)
+
 AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
 
 ## Features
@@ -41,7 +49,7 @@ Replace `path/to/avalynx-loader.js` with the actual path to the file in your pro
 AvalynxLoader is also available via [jsDelivr](https://www.jsdelivr.com/). You can include it in your project like this:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@1.0.1/dist/js/avalynx-loader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@1.0.2/dist/js/avalynx-loader.min.js"></script>
 ```
 
 ## Installation via NPM ([Link](https://www.npmjs.com/package/avalynx-loader))
