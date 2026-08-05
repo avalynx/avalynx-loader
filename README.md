@@ -1,12 +1,14 @@
 # AvalynxLoader
 
-[![npm version](https://img.shields.io/npm/v/avalynx-loader)](https://www.npmjs.com/package/avalynx-loader)
-[![npm downloads](https://img.shields.io/npm/dt/avalynx-loader)](https://www.npmjs.com/package/avalynx-loader)
-[![jsDelivr](https://img.shields.io/jsdelivr/npm/hm/avalynx-loader)](https://www.jsdelivr.com/package/npm/avalynx-loader)
-[![License](https://img.shields.io/npm/l/avalynx-loader)](LICENSE)
-[![Tests](https://github.com/avalynx/avalynx-loader/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/avalynx/avalynx-loader/actions/workflows/tests.yml)
-[![codecov](https://codecov.io/gh/avalynx/avalynx-loader/branch/main/graph/badge.svg)](https://codecov.io/gh/avalynx/avalynx-loader)
-[![GitHub stars](https://img.shields.io/github/stars/avalynx/avalynx-loader?style=flat&logo=github)](https://github.com/avalynx/avalynx-loader)
+[![npm version](https://jbs-newmedia.de/badge/npm/avalynx-loader/version.svg)](https://www.npmjs.com/package/avalynx-loader)
+[![npm downloads](https://jbs-newmedia.de/badge/npm/avalynx-loader/download.svg)](https://www.npmjs.com/package/avalynx-loader)
+[![Composer version](https://jbs-newmedia.de/badge/composer/avalynx/avalynx-loader/version.svg)](https://packagist.org/packages/avalynx/avalynx-loader)
+[![Composer downloads](https://jbs-newmedia.de/badge/composer/avalynx/avalynx-loader/download.svg)](https://packagist.org/packages/avalynx/avalynx-loader)
+[![jsDelivr](https://jbs-newmedia.de/badge/jsdelivr/avalynx-loader/hits.svg)](https://www.jsdelivr.com/package/npm/avalynx-loader)
+[![License](https://jbs-newmedia.de/badge/npm/avalynx-loader/license.svg)](LICENSE)
+[![Tests](https://jbs-newmedia.de/badge/github/avalynx/avalynx-loader/tests.svg)](https://github.com/avalynx/avalynx-loader/actions/workflows/tests.yml)
+[![codecov](https://jbs-newmedia.de/badge/codecov/avalynx/avalynx-loader/coverage.svg)](https://codecov.io/gh/avalynx/avalynx-loader)
+[![GitHub stars](https://jbs-newmedia.de/badge/github/avalynx/avalynx-loader/stars.svg)](https://github.com/avalynx/avalynx-loader)
 
 AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
 
@@ -15,7 +17,7 @@ AvalynxLoader is a lightweight JavaScript library designed to provide a loading 
 - **Lightweight**: AvalynxLoader is a lightweight library without heavy dependencies.
 - **Loading Overlay**: AvalynxLoader provides a simple way to create and manage loading overlays for DOM elements.
 
-## Example
+## Examples
 
 Here's a simple example of how to use AvalynxLoader in your project:
 
@@ -49,7 +51,7 @@ Replace `path/to/avalynx-loader.js` with the actual path to the file in your pro
 AvalynxLoader is also available via [jsDelivr](https://www.jsdelivr.com/). You can include it in your project like this:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@1.0.2/dist/js/avalynx-loader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/avalynx-loader@1.0.3/dist/js/avalynx-loader.min.js"></script>
 ```
 
 ## Installation via NPM ([Link](https://www.npmjs.com/package/avalynx-loader))
@@ -121,7 +123,7 @@ myLoader.load=false;
 
 AvalynxLoader allows the following options for customization:
 
-- `selector`: A custom selector for targeting tables within the DOM (default: `'.avalynx-loader'`).
+- `selector`: A custom selector for targeting loader elements within the DOM (default: `'.avalynx-loader'`).
 - `options`: An object containing the following keys:
     - `className`: (string) A custom class name for the loader element (default: `'spinner-border text-primary'`).
 - `language` An object containing the following keys:
