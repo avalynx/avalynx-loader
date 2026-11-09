@@ -3,7 +3,7 @@
  *
  * AvalynxLoader is a lightweight JavaScript library designed to provide a loading overlay for DOM elements. Based on Bootstrap >=5.3 without any framework dependencies.
  *
- * @version 1.0.3
+ * @version 1.0.4
  * @license MIT
  * @author https://github.com/avalynx/avalynx-loader/graphs/contributors
  * @website https://github.com/avalynx/
@@ -15,7 +15,7 @@
  * @param {string} options.className - A custom class name for the loader element (default: 'spinner-border text-primary').
  *
  * @param {object} language - An object containing the following keys:
- * @param {string} language.loaderText - A custom text for the loader element. If set to empty string, no text will be displayed. (default: 'Loading...').
+ * @param {string} language.loaderText - A custom text for the loader element. Rendered as plain text, HTML is escaped to prevent XSS. If set to empty string, no text will be displayed. (default: 'Loading...').
  *
  */
 
@@ -99,9 +99,12 @@ export class AvalynxLoader {
         spinner.className = this.options.className;
         spinner.setAttribute('role', 'status');
         if (this.language.loaderText !== '') {
-            spinner.innerHTML = '<span class="visually-hidden">' + this.language.loaderText + '</span>';
+            const loaderText = document.createElement('span');
+            loaderText.className = 'visually-hidden';
+            loaderText.textContent = this.language.loaderText;
+            spinner.replaceChildren(loaderText);
         } else {
-            spinner.innerHTML = '';
+            spinner.replaceChildren();
         }
 
         overlay.appendChild(spinner);

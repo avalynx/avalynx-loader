@@ -236,6 +236,23 @@ describe('AvalynxLoader', () => {
             expect(srOnly.textContent).toBe('Bitte warten...');
         });
 
+        test('loaderText is rendered as plain text to prevent XSS', () => {
+            const el = document.createElement('div');
+            el.className = 'lang-xss';
+            document.body.appendChild(el);
+
+            const loader = new AvalynxLoader('.lang-xss', {}, { loaderText: '<img src=x onerror="alert(1)">Lade...' });
+            loader.load = true;
+
+            const overlay = loader.loaderOverlays.get(el);
+            const spinner = overlay.querySelector('div');
+            const srOnly = spinner.querySelector('.visually-hidden');
+            expect(srOnly).toBeTruthy();
+            expect(srOnly.querySelector('img')).toBeNull();
+            expect(srOnly.innerHTML).toBe('&lt;img src=x onerror="alert(1)"&gt;Lade...');
+            expect(srOnly.textContent).toBe('<img src=x onerror="alert(1)">Lade...');
+        });
+
         test('empty loaderText results in empty accessible text (no visible text)', () => {
             const el = document.createElement('div');
             el.className = 'lang-empty';
